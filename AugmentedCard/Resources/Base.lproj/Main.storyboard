@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="km5-JJ-FKN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CONTACTS-->
+        <scene sceneID="Mo3-lS-hG6">
+            <objects>
+                <navigationController id="jjw-aL-LLS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="CONTACTS" id="kBM-zr-bWX">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D1y-tH-Yfg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gbc-fI-mjl" kind="relationship" relationship="rootViewController" id="0we-SS-ah0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eer-HF-ain" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="428"/>
+        </scene>
+        <!--Contacts View Controller-->
+        <scene sceneID="Jer-bg-JcZ">
+            <objects>
+                <viewController id="gbc-fI-mjl" customClass="ContactsViewController" customModule="AugmentedCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y5y-AE-xyT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jxf-2i-xTg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jxf-2i-xTg" firstAttribute="leading" secondItem="M2H-AM-THH" secondAttribute="leading" id="TVg-eQ-wqP"/>
+                            <constraint firstItem="jxf-2i-xTg" firstAttribute="top" secondItem="M2H-AM-THH" secondAttribute="top" id="ZVH-74-JUj"/>
+                            <constraint firstItem="M2H-AM-THH" firstAttribute="bottom" secondItem="jxf-2i-xTg" secondAttribute="bottom" id="opI-W9-3qL"/>
+                            <constraint firstItem="M2H-AM-THH" firstAttribute="trailing" secondItem="jxf-2i-xTg" secondAttribute="trailing" id="uBw-9U-ait"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M2H-AM-THH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iE1-cq-hi2"/>
+                    <connections>
+                        <outlet property="tableView" destination="jxf-2i-xTg" id="cPX-Ay-puK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYU-mN-FSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513" y="428"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Nza-Um-Eoz">
+            <objects>
+                <tabBarController id="km5-JJ-FKN" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TUt-Dh-6vf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="relationship" relationship="viewControllers" id="uAP-r6-WDN"/>
+                        <segue destination="jjw-aL-LLS" kind="relationship" relationship="viewControllers" id="PeU-Qr-DxA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kWm-IF-xlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1292" y="77"/>
+        </scene>
+        <!--CARD SCANNER-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ARCardViewController" customModule="AugmentedCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </arscnView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5YM-9X-JN2">
+                                <rect key="frame" x="56.5" y="40" width="262.5" height="157.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5YM-9X-JN2" secondAttribute="height" multiplier="15:9" id="1fW-d7-PJB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm scanned card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nct-Ju-VJs">
+                                <rect key="frame" x="103" y="206" width="169.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="198-ff-J5u">
+                                <rect key="frame" x="121.5" y="233.5" width="132" height="46"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdU-ue-cUB">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="KFM-EU-gfx"/>
+                                            <constraint firstAttribute="width" secondItem="vdU-ue-cUB" secondAttribute="height" multiplier="1:1" id="OUY-eP-w07"/>
+                                        </constraints>
+                                        <state key="normal" title="✔️">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addContanct:" destination="BV1-FR-VrT" eventType="touchUpInside" id="KYC-Rx-tge"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0th-CV-GgG">
+                                        <rect key="frame" x="86" y="0.0" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0th-CV-GgG" secondAttribute="height" multiplier="1:1" id="fmN-tn-ome"/>
+                                        </constraints>
+                                        <state key="normal" title="✖️">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="removeCard:" destination="BV1-FR-VrT" eventType="touchUpInside" id="fKR-cm-Rzh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vdU-ue-cUB" firstAttribute="width" secondItem="0th-CV-GgG" secondAttribute="width" id="USF-TX-1sN"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybt-Hs-4b7">
+                                <rect key="frame" x="56.5" y="468" width="262.5" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Pg6-3v-W9X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Tap here to add new card">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="newCardAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="DQq-2J-A9j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ybt-Hs-4b7" firstAttribute="centerX" secondItem="fQZ-KI-GVf" secondAttribute="centerX" id="6JP-mM-atE"/>
+                            <constraint firstItem="ybt-Hs-4b7" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="bottom" constant="-150" id="Bna-Ch-mwc"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="Nct-Ju-VJs" firstAttribute="centerX" secondItem="5YM-9X-JN2" secondAttribute="centerX" id="HW5-Mj-Q8M"/>
+                            <constraint firstItem="5YM-9X-JN2" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="MLW-FS-h7t"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="198-ff-J5u" firstAttribute="centerX" secondItem="Nct-Ju-VJs" secondAttribute="centerX" id="YNW-82-bzy"/>
+                            <constraint firstItem="5YM-9X-JN2" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="20" id="bil-y1-qMX"/>
+                            <constraint firstItem="198-ff-J5u" firstAttribute="firstBaseline" secondItem="Nct-Ju-VJs" secondAttribute="baseline" constant="40" id="hub-Fz-3AH"/>
+                            <constraint firstItem="ybt-Hs-4b7" firstAttribute="width" secondItem="U0K-SW-4ec" secondAttribute="width" multiplier="0.7" id="kzY-GR-WbE"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                            <constraint firstItem="5YM-9X-JN2" firstAttribute="width" secondItem="U0K-SW-4ec" secondAttribute="width" multiplier="0.7" id="wN1-uV-rEL"/>
+                            <constraint firstItem="Nct-Ju-VJs" firstAttribute="firstBaseline" secondItem="5YM-9X-JN2" secondAttribute="baseline" constant="24.5" symbolType="layoutAnchor" id="yl6-5z-CYb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="CARD SCANNER" id="uYj-mW-ntF">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addContactLabel" destination="Nct-Ju-VJs" id="2rP-Cu-YKs"/>
+                        <outlet property="cancelButton" destination="0th-CV-GgG" id="Qn5-jr-ISb"/>
+                        <outlet property="decisionButtonsStack" destination="198-ff-J5u" id="vgI-md-Ppu"/>
+                        <outlet property="imagePreview" destination="5YM-9X-JN2" id="nA9-mK-Z7F"/>
+                        <outlet property="newCardButton" destination="ybt-Hs-4b7" id="bdE-7Z-xoV"/>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="yesButton" destination="vdU-ue-cUB" id="Iga-wc-oR1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="-233"/>
+        </scene>
+    </scenes>
+</document>
