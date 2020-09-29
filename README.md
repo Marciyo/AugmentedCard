@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-![](demo.gif)
+    <img src="demo.gif" width="400" max-width="90%" alt="Augmented Card Demo Gif" />
 </p>
 
 ## About
