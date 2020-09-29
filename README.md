@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-![](ezgif.com-video-to-gif-2.gif)
+![](demo.gif)
 </p>
 
 ## About
